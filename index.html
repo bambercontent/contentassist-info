@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>contentassist: a desktop app for reading my own TikTok account</title><meta name="description" content="contentassist: a desktop application, run by its owner, designed to read the owner's own TikTok profile and public videos. Current status, planned features, and legal pages."><style>
+:root{--bg:#fff;--fg:#1d2528;--mut:#566;--ln:#d8dee0;--ac:#17606a}
+@media (prefers-color-scheme:dark){:root{--bg:#14191b;--fg:#e8eef0;--mut:#9fb0b4;--ln:#2c3639;--ac:#6cc4cf}}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:46rem;margin:0 auto;padding:2rem 1rem 4rem}
+h1{font-size:1.7rem;margin:.2rem 0 .4rem}h2{font-size:1.15rem;margin:2rem 0 .4rem}
+.mut{color:var(--mut)}a{color:var(--ac)}
+nav{border-bottom:1px solid var(--ln);padding:.8rem 1rem}nav a{margin-right:1rem}
+.box{border:1px solid var(--ln);border-radius:8px;padding:.8rem 1rem;margin:1rem 0}
+footer{border-top:1px solid var(--ln);margin-top:3rem;padding-top:1rem;color:var(--mut);font-size:.9rem}
+</style></head><body>
+<nav><a href="index.html">contentassist</a><a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy Policy</a></nav>
+<main>
+<h1>contentassist</h1>
+<p>contentassist is a small desktop application that its owner runs on their own computer. It is built to connect to the owner's <strong>own</strong> TikTok account through TikTok Login Kit for Desktop, and then to read that account's basic profile details and public video list, so the owner can see how their own videos are performing. It is not a public service and has no other users. This website is only an information page for the application.</p>
+<div class="box"><strong>Legal pages:</strong> <a href="terms.html">Terms of Service</a> &middot; <a href="privacy.html">Privacy Policy</a></div>
+<h2>Current status</h2>
+<p>In development. A TikTok sandbox has been set up for future testing, but so far the application has been tested only locally and offline: <strong>live TikTok authorization has not yet been tested</strong>. It has <strong>not</strong> been submitted to TikTok for review and it has <strong>not</strong> been approved by TikTok. No TikTok account data has been received by the application so far.</p>
+<h2>What works today</h2>
+<ul>
+<li>A local sign-in helper, built and tested on the owner's computer without contacting TikTok. It prepares the sign-in request the way TikTok's desktop documentation describes, listens for TikTok's response on the owner's own computer only, and can exchange the response for access tokens.</li>
+<li>Encrypted local storage for the app's client secret and, once sign-in happens, its tokens, and a command that deletes them.</li>
+</ul>
+<h2>Planned, not available yet</h2>
+<ul>
+<li>After the owner signs in and gives consent on TikTok's own page, read the owner's open ID, display name and avatar (permission <code>user.info.basic</code>) and the owner's public video list with the counts TikTok returns (permission <code>video.list</code>). No other permissions are planned.</li>
+</ul>
+<h2>What it does not do</h2>
+<ul>
+<li>It does not post, edit, delete or message anything on TikTok.</li>
+<li>It does not read any account other than the owner's own account.</li>
+<li>It does not find or rank trends, hashtags, sounds or other people's videos.</li>
+<li>This website does not collect information from visitors.</li>
+</ul>
+
+<footer>contentassist is an independent application. It is not affiliated with, endorsed by or approved by TikTok. Last updated October 18, 2026. Contact: floresamber5@gmail.com</footer></main></body></html>
