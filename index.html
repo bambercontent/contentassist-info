@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>contentassist: a desktop app for reading my own TikTok account</title><meta name="description" content="contentassist: a desktop application, run by its owner, designed to read the owner's own TikTok profile and public videos. Current status, planned features, and legal pages."><style>
+<title>contentassist: a private research desktop app</title><meta name="description" content="contentassist: a private desktop application. Intended purpose, what works today, what is not implemented, and legal pages."><style>
 :root{--bg:#fff;--fg:#1d2528;--mut:#566;--ln:#d8dee0;--ac:#17606a}
 @media (prefers-color-scheme:dark){:root{--bg:#14191b;--fg:#e8eef0;--mut:#9fb0b4;--ln:#2c3639;--ac:#6cc4cf}}
 body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
@@ -14,24 +14,25 @@ footer{border-top:1px solid var(--ln);margin-top:3rem;padding-top:1rem;color:var
 <nav><a href="index.html">contentassist</a><a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy Policy</a></nav>
 <main>
 <h1>contentassist</h1>
-<p>contentassist is a small desktop application that its owner runs on their own computer. It is built to connect to the owner's <strong>own</strong> TikTok account through TikTok Login Kit for Desktop, and then to read that account's basic profile details and public video list, so the owner can see how their own videos are performing. It is not a public service and has no other users. This website is only an information page for the application.</p>
+<p>contentassist is a small desktop application that its owner runs on their own computer. It is not a public service and has no other users. This website is only an information page for the application.</p>
 <div class="box"><strong>Legal pages:</strong> <a href="terms.html">Terms of Service</a> &middot; <a href="privacy.html">Privacy Policy</a></div>
-<h2>Current status</h2>
-<p>In development. A TikTok sandbox has been set up for future testing, but so far the application has been tested only locally and offline: <strong>live TikTok authorization has not yet been tested</strong>. It has <strong>not</strong> been submitted to TikTok for review and it has <strong>not</strong> been approved by TikTok. No TikTok account data has been received by the application so far.</p>
+<h2>Intended purpose</h2>
+<p>The owner intends to use it as a private research tool, to review public TikTok content for creative ideas: sounds, hashtags, subjects and conversations, and video formats. <strong>That research is not implemented.</strong> The application cannot currently access any other creator's content, any recommendation feed, or any sound or trend data, and it does not claim to.</p>
 <h2>What works today</h2>
 <ul>
-<li>A local sign-in helper, built and tested on the owner's computer without contacting TikTok. It prepares the sign-in request the way TikTok's desktop documentation describes, listens for TikTok's response on the owner's own computer only, and can exchange the response for access tokens.</li>
-<li>Encrypted local storage for the app's client secret and, once sign-in happens, its tokens, and a command that deletes them.</li>
+<li>Signing in with one TikTok account that the owner controls, through TikTok Login Kit for Desktop, and approving the permissions on TikTok's own consent page.</li>
+<li>Reading that account's basic profile (permission <code>user.info.basic</code>).</li>
+<li>Requesting that account's own public video list (permission <code>video.list</code>).</li>
+<li>Encrypted local storage of the application's credentials, and a command that deletes them.</li>
 </ul>
-<h2>Planned, not available yet</h2>
-<ul>
-<li>After the owner signs in and gives consent on TikTok's own page, read the owner's open ID, display name and avatar (permission <code>user.info.basic</code>) and the owner's public video list with the counts TikTok returns (permission <code>video.list</code>). No other permissions are planned.</li>
-</ul>
+<p>Signing in only shows that the connection to that one account works. It does not give access to recommendations or to other people's videos.</p>
+<h2>Status</h2>
+<p>In development, in TikTok's sandbox only. The application has not been submitted to TikTok for review and has not been approved by TikTok.</p>
 <h2>What it does not do</h2>
 <ul>
 <li>It does not post, edit, delete or message anything on TikTok.</li>
-<li>It does not read any account other than the owner's own account.</li>
-<li>It does not find or rank trends, hashtags, sounds or other people's videos.</li>
+<li>It does not read any account other than the one the owner signs in with.</li>
+<li>It does not collect recommendations, trends, hashtags, sounds or other creators' videos.</li>
 <li>This website does not collect information from visitors.</li>
 </ul>
 

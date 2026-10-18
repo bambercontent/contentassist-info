@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Privacy Policy: contentassist</title><meta name="description" content="Privacy Policy for the contentassist desktop application: what it stores today, what is planned, and how data is deleted or access revoked."><style>
+<title>Privacy Policy: contentassist</title><meta name="description" content="Privacy Policy for the contentassist desktop application: what it handles today, what is only intended, and how data is deleted or access revoked."><style>
 :root{--bg:#fff;--fg:#1d2528;--mut:#566;--ln:#d8dee0;--ac:#17606a}
 @media (prefers-color-scheme:dark){:root{--bg:#14191b;--fg:#e8eef0;--mut:#9fb0b4;--ln:#2c3639;--ac:#6cc4cf}}
 body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
@@ -15,26 +15,22 @@ footer{border-top:1px solid var(--ln);margin-top:3rem;padding-top:1rem;color:var
 <main>
 <h1>Privacy Policy</h1>
 <p class="mut">contentassist, last updated October 18, 2026</p>
-<p>This policy covers the contentassist desktop application and this website. It separates what happens <strong>today</strong> from what is <strong>planned</strong>.</p>
-<h2>Today</h2>
+<p>This policy covers the contentassist desktop application and this website. It separates what the application does <strong>today</strong> from what is only <strong>intended</strong>.</p>
+<h2>What the application handles today</h2>
 <ul>
-<li><strong>No TikTok account data has been received.</strong> No sign-in with TikTok has been completed, so no tokens, profile details or video details exist.</li>
-<li><strong>Client secret.</strong> If the owner stores the app's client secret, it is typed into a hidden prompt and kept on the owner's own computer, encrypted to the owner's Windows user account. The application does not write it to configuration files, logs, web pages or source control.</li>
+<li><strong>From TikTok.</strong> After the owner signs in with a TikTok account they control, the application receives access and refresh tokens for that account and can read its basic profile (open ID, union ID, display name and avatar address) and request its own public video list. A short summary of the connection check is kept in a local database on the owner's computer. No other TikTok data is collected.</li>
+<li><strong>Credentials.</strong> The tokens and the application's client secret are kept on the owner's own computer, encrypted to the owner's Windows user account. The application does not write them to configuration files, logs, web pages or source control. TikTok states that access tokens last 24 hours and refresh tokens about a year.</li>
+<li><strong>Data flows.</strong> The application sends data only to TikTok's own authorization and API addresses. It has no advertising, no analytics and no tracking. It does not sell data or give it to third parties, and it does not send data to any AI service or train any model.</li>
 <li><strong>This website.</strong> It is a static page with no forms, scripts or analytics, and it collects nothing from visitors. Its hosting provider (GitHub Pages) may keep ordinary server logs, such as visitors' IP addresses, under the provider's own privacy statement. The application's owner does not use those logs.</li>
 </ul>
-<h2>Planned (not available yet)</h2>
-<ul>
-<li>When the owner signs in with TikTok and consents, the application would receive access and refresh tokens for the owner's own account. TikTok states that access tokens last 24 hours and refresh tokens about a year. They would be stored on the owner's computer, encrypted to the owner's Windows user account.</li>
-<li>It would then read the owner's open ID, display name, avatar and public video list with the counts TikTok returns (permissions <code>user.info.basic</code> and <code>video.list</code> only), and keep that information in a local database on the owner's computer, to show the owner how their own videos perform.</li>
-<li>The application would send data only to TikTok's own authorization and API addresses. It has no advertising, no analytics and no tracking. It does not sell data or give it to third parties.</li>
-<li>The application itself does not train or fine-tune any model on this data, and it does not send data to any AI service.</li>
-</ul>
+<h2>Intended, not implemented</h2>
+<p>The owner intends to review public TikTok content for research. The application does not do this today. If it ever reads other TikTok data, that will be limited to what TikTok permits and the owner approves, and this policy will be updated first.</p>
 <h2>Sharing the owner chooses to do outside the application</h2>
-<p>Separately from the application's own data flows above: if the owner chooses to copy or share results with an external AI service, including an assistant that runs in the cloud rather than on the owner's computer, that is the owner's own choice made outside the application, and that service's own terms and privacy practices apply. The client secret and tokens are never part of anything the owner shares, and the application does not display them.</p>
+<p>Separately from the application's own data flows: if the owner chooses to copy or share results with an external AI service, including an assistant that runs in the cloud rather than on the owner's computer, that is the owner's own choice made outside the application, and that service's own terms and privacy practices apply. The client secret and tokens are never part of anything the owner shares, and the application does not display them.</p>
 <h2>Retention and deletion: three separate actions</h2>
 <ul>
 <li><strong>Deleting stored credentials.</strong> The application's disconnect command deletes the stored client secret and tokens from the owner's computer. Nothing deletes them automatically: expired tokens stay on disk until the owner runs the command.</li>
-<li><strong>Deleting retrieved data.</strong> Profile and video details, once the application stores any, are kept until the owner deletes the local database files. The disconnect command does not delete them, and there is no automatic deletion.</li>
+<li><strong>Deleting retrieved data.</strong> The local connection summary and anything else the application stores are kept until the owner deletes the local database files. The disconnect command does not delete them, and there is no automatic deletion.</li>
 <li><strong>Revoking access at TikTok.</strong> The owner can remove the application's access in TikTok's own settings for connected apps. That does not delete anything stored on the owner's computer, and deleting local files does not revoke access at TikTok.</li>
 </ul>
 <h2>Contact</h2>
